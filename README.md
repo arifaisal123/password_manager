@@ -7,6 +7,7 @@ Password Manager Software is designed to manage all your password needs, from ge
 - [Overview](#overview)
   - [Functionality](#functionality)
   - [Screenshot](#screenshot)
+  - [Installation](#installation)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -31,6 +32,10 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot.png)
+
+### Installation
+
+This program was made with Python 3.11.1. Ensure other dependencies mentioned in requirements.txt are installed in your system. Use "python main.py" in CMD to start the program.
 
 ### Links
 
