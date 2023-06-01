@@ -11,6 +11,7 @@ Password Manager Software is designed to manage all your password needs, from ge
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Modules used](#modules-used)
   - [Continued development](#continued-development)
 - [Author](#author)
 
@@ -46,7 +47,10 @@ This program was made with Python 3.11.1. Ensure other dependencies mentioned in
 
 ### Built with
 
-- Python
+Python
+
+### Modules used
+
 - Cryptography
 - Art 
 - Random Password Generator
