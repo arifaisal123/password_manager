@@ -5,6 +5,7 @@ from cryptography.fernet import Fernet
 import pwinput
 
 
+# Stores records of the user (owner, website, username, password) in the database
 def store_records(owner, fernet):   
     # Stores passwords in the database
     conn = sqlite3.connect('records.sqlite')
@@ -47,6 +48,7 @@ def store_records(owner, fernet):
     conn.close()
 
 
+# Shows all the records of the user from the database
 def show_records(user, fernet):    
         # Decrypt the password
         conn = sqlite3.connect('records.sqlite')
@@ -87,6 +89,7 @@ def show_records(user, fernet):
             conn.close()
     
 
+# Deletes records of the user from the database
 def delete_records(user):
     conn = sqlite3.connect('records.sqlite')
     cur = conn.cursor()

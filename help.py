@@ -1,5 +1,6 @@
 from art import *
 
+# Prints all the help commands that are available
 def get_help():
     print("-----------------------------------------------------------------------------------------------------------")
     tprint("                            Help / FAQ")
@@ -24,7 +25,7 @@ def get_help():
     user_input = input("Enter a number from above to get more information: ")
     help_logic(user_input)
 
-
+# Generate the right help message, based on user input
 def help_logic(num):
     if num == "1":
         print_help_1()

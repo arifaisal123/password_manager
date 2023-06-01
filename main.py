@@ -22,12 +22,17 @@ from users import *
 from records import *
 from helpers import *
 from passwords import *
+from art import *
 
 
 def main():
+    # Prints welcome message, and the version of the software
     welcome_message()
+
+    # Prints instructions on how to use the software
     show_instructions()
     
+    # Initial login/ registration prompt
     while True:
         print("""Please enter a number from the following: 
         
@@ -36,6 +41,7 @@ def main():
         3 -- Forgot Password
         4 -- Change Password
         """)
+
         user_input = input("New User? Type 1 to Register, or 2 for Login (Returning User): ")
         if user_input == "1":
             register_user()
@@ -45,22 +51,31 @@ def main():
             current_user = login_user()
             break
         elif user_input == "3":
-            pass
+            print("------------------------------------------------------------------------------------------------")
+            tprint("In   Development")
+            print("This feature is currently in development, and will be added in the future release.")
+            print("------------------------------------------------------------------------------------------------")
         elif user_input == "4":
-            pass
+            print("------------------------------------------------------------------------------------------------")
+            tprint("In   Development")
+            print("This feature is currently in development, and will be added in the future release.")
+            print("------------------------------------------------------------------------------------------------")
         else:
             print("Invalid input!")
     
+    # Gets unique user key for the user
     user_key = get_user_key()
     
     # Create a Fernet object with the key
     fernet = Fernet(user_key)
 
+    # Prompt the user for feature number to be used
     while True:
         feature_num = show_features()
         program_logic(feature_num, current_user, fernet)
 
 
+# Takes user input, and generate the right feature
 def program_logic(num, user, fernet):
     if num == "1":
         random_pass = generate_password()
@@ -86,10 +101,12 @@ def program_logic(num, user, fernet):
         exit()
 
     user_input = input("Do you want to continue? (Enter any key to view features, or 7 to exit) ")
+    
     if user_input == "7":
         exit_message()
         exit()
 
 
+# When the program runs, the script will function (not available on imports)
 if __name__ == "__main__":
     main()

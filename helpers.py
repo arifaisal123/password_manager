@@ -2,6 +2,7 @@ from art import *
 from cryptography.fernet import Fernet
 
 
+# Generates the welcome message and version number of the software
 def welcome_message():
     print()
     print("--------------------------------------------   Welcome to   --------------------------------------------")
@@ -9,6 +10,7 @@ def welcome_message():
     print("--------------------------------------------  Version 1.0.1  --------------------------------------------")
 
 
+# Prints instruction on how to use the software
 def show_instructions():
     print()
     print("""Password Manager is a simple password managing software developed by Arif Faisal (arif.iba34@gmail.com). 
@@ -22,6 +24,7 @@ def show_instructions():
 \n----------------------------------------------------------------------------------------------------------""")
 
 
+# Prompts the user for key requirement, and generates a unique one, if required
 def get_user_key():
     print("If you already have a key, type 'N' or 'No' to continue.")
     print("(Keys are required to securely store your password. If you don't have one, type 'Y' or 'Yes)")
@@ -41,6 +44,7 @@ def get_user_key():
     return user_key
 
 
+# Prints all the features that are available for use
 def show_features():
     print()
     print("-----------------------------------------------------------------------------------------------------------")
@@ -60,6 +64,7 @@ def show_features():
     return relevant_num
 
 
+# Generates a unique secure key based on Fernet object
 def generate_key():
     user_key = Fernet.generate_key()
     print()
@@ -74,6 +79,7 @@ def generate_key():
     return user_key
 
 
+# Prints exit message to the user
 def exit_message():
     tprint("Thank   you")
     print("--------------- for using Password Manager! ---------------")
