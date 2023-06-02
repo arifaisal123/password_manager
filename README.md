@@ -66,6 +66,7 @@ Python
 - Random Password Generator
 - Tabulate
 - Pwinput
+- Pytest
 
 ### Continued development
 
