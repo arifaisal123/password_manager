@@ -36,11 +36,20 @@ Users should be able to:
 
 ### Installation
 
-This program was made with Python 3.11.1. Ensure other dependencies mentioned in requirements.txt are installed in your system. Use "python main.py" in CMD to start the program.
+This program was made with Python 3.11.1. Ensure other dependencies mentioned in requirements.txt are installed in your system. Use "python project.py" in CMD to start the program.
+
+### Credentials for testing
+
+The following test credentials are provided to check the functionalities of the software. Users can remove them anytime, if they will. Credentials are provided for test purposes only, and does not resemble any real account.
+
+username: test123
+email: test123@pwmtest.com
+password: test123
+secure key: 2vqhv7Dq19z_FwB67AO1TwnxlcDS_NDx5_vKMrgJcf4=
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Source Code URL: [https://github.com/arifaisal123/password_manager](https://github.com/arifaisal123/password_manager)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
