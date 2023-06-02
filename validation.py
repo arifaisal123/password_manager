@@ -1,6 +1,11 @@
 import re
 
 def validate_username(username):
+    """
+	Validates the username.
+	:return: True if validation is successful, otherwise raise ValueError.
+	:rtype: Boolean
+    """   
     # Username first letter validation
     if not username[0].isalpha():
         raise ValueError("Username must start with alphabets.")
@@ -24,6 +29,11 @@ def validate_username(username):
 
 
 def validate_email(email):
+    """
+	Validates the email.
+	:return: True if validation is successful, otherwise raise ValueError.
+	:rtype: Boolean
+    """  
     pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
 
     if re.match(pattern, email):
@@ -33,12 +43,22 @@ def validate_email(email):
 
 
 def validate_password(password):
+    """
+	Validates the password.
+	:return: True if validation is successful, otherwise raise ValueError.
+	:rtype: Boolean
+    """ 
     if len(password) < 6:
             raise ValueError("Passwords need to be at least 6 characters long.")
     return True
 
 
 def validate_password_match(password, confirm_password):
+    """
+	Validates the password match.
+	:return: True if validation is successful, otherwise raise ValueError.
+	:rtype: Boolean
+    """ 
     if password == confirm_password:
         return True
     else:

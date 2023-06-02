@@ -1,7 +1,12 @@
 from art import *
 
-# Prints all the help commands that are available
+
 def get_help():
+    """
+	Prints all the help commands that are available.
+	:return: None
+	:rtype: Nonetype
+    """
     print("-----------------------------------------------------------------------------------------------------------")
     tprint("                            Help / FAQ")
     print("-----------------------------------------------------------------------------------------------------------")
@@ -25,8 +30,13 @@ def get_help():
     user_input = input("Enter a number from above to get more information: ")
     help_logic(user_input)
 
-# Generate the right help message, based on user input
+
 def help_logic(num):
+    """
+	Generates the right help message, based on user input.
+	:return: None
+	:rtype: Nonetype
+    """
     if num == "1":
         print_help_1()
     elif num == "2":
@@ -60,6 +70,11 @@ def help_logic(num):
 
 
 def print_help_1():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                             What is this software about?
@@ -71,6 +86,11 @@ def print_help_1():
 
 
 def print_help_2():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                       What are the benefits of using Password Manager, and why should I use one?
@@ -84,6 +104,11 @@ def print_help_2():
 
 
 def print_help_3():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                          What is a random password?
@@ -97,6 +122,11 @@ def print_help_3():
 
 
 def print_help_4():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                         How will my password be stored?
@@ -108,6 +138,11 @@ def print_help_4():
 
 
 def print_help_5():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                 Will my passwords be shown to me in a secure manner?
@@ -120,6 +155,11 @@ def print_help_5():
 
 
 def print_help_6():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                            Can I delete my records?
@@ -130,6 +170,11 @@ def print_help_6():
 
 
 def print_help_7():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                              What is a secure key?
@@ -140,6 +185,11 @@ def print_help_7():
 
 
 def print_help_8():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                         How can I generate a secure key?
@@ -150,6 +200,11 @@ def print_help_8():
 
 
 def print_help_9():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                        What if there are bugs in software?
@@ -160,6 +215,11 @@ def print_help_9():
 
 
 def print_help_10():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                     What if the program becomes unresponsive?
@@ -169,6 +229,11 @@ def print_help_10():
 
 
 def print_help_11():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                      Can multiple people use this software?
@@ -179,6 +244,11 @@ def print_help_11():
 
 
 def print_help_12():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                      What makes this software really secure?
@@ -192,16 +262,27 @@ def print_help_12():
 
 
 def print_help_13():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                      Why do I need to provide my email address?
       You will be required to provide your email address during the registration process. Your email will only be used when you prompt for "Forgot
-             Password" option. Doing so, you will be provided with an OTP or One Time Password that you need to enter during the process.
+         Password" option. Doing so, you will be provided with an OTP or One Time Password that you need to enter during the process. Currently, 
+                                        this feature is in development, and will be available in future release.
     -----------------------------------------------------------------------------------------------------------------------------------------------
     """)
 
 
 def print_help_14():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                           What is a valid email address?
@@ -213,10 +294,16 @@ def print_help_14():
 
 
 def print_help_15():
+    """
+	Generates relevant help message.
+	:return: None
+	:rtype: Nonetype
+    """
     print("""
     -----------------------------------------------------------------------------------------------------------------------------------------------
                                                         I did not receive any email. What do I do?
-         Please check your spam folder. Additionally, check if your internet connection is working or not at the time of the password request.
+         Please check your spam folder. Additionally, check if your internet connection is working or not at the time of the password request. 
+                                  Currently, this feature is in development, and will be available in future release.
     -----------------------------------------------------------------------------------------------------------------------------------------------
     """)
     

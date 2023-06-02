@@ -3,8 +3,13 @@ import hashlib
 from art import *
 import pwinput
 
-# Registers user in the database
+
 def register_user(username, email, password):
+    """
+	Registers user in the database.
+	:return: None
+	:rtype: Nonetype
+    """   
     # Connects with the database
     conn = sqlite3.connect("users.sqlite")
     cur = conn.cursor()              
@@ -15,14 +20,14 @@ def register_user(username, email, password):
     hex_dig = hash_object.hexdigest()
 
     # Registers users in the database
-    cur.executescript('''
+    cur.executescript("""
     CREATE TABLE IF NOT EXISTS Users (
         id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
         username    TEXT UNIQUE,
         email       TEXT,
         password    TEXT 
     );
-    ''')
+    """)
 
     cur.execute("""INSERT INTO Users (username, email, password) 
         VALUES ( ?, ?, ? )""", ( username, email, hex_dig))
@@ -36,6 +41,11 @@ def register_user(username, email, password):
 
 
 def login_user():
+    """
+	Logs the user in after necessary input, and check in database.
+	:return: None
+	:rtype: Nonetype
+    """   
     print()
     print("----------------------------------------------------------------------------------------------------------")
     tprint("                                    Login")

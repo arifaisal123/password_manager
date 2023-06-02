@@ -2,8 +2,12 @@ import pytest
 from project import validate_username, validate_email, validate_password, validate_password_match
 
 
-# Tests the validate_username function
 def test_validate_username():
+    """
+	Tests the validate_username function.
+	:return: None
+	:rtype: Nonetype
+    """   
     with pytest.raises(ValueError):
         validate_username("123testing")
         validate_username("tstb6")
@@ -15,6 +19,11 @@ def test_validate_username():
 
 
 def test_validate_email():
+    """
+	Tests the validate_email function.
+	:return: None
+	:rtype: Nonetype
+    """   
     with pytest.raises(ValueError):
         validate_email("abc.com")
         validate_email("_@abc.com")
@@ -29,6 +38,11 @@ def test_validate_email():
    
 
 def test_validate_password():
+    """
+	Tests the validate_password function.
+	:return: None
+	:rtype: Nonetype
+    """   
     with pytest.raises(ValueError):
         validate_password("test1")
         validate_password("less")
@@ -39,6 +53,11 @@ def test_validate_password():
 
 
 def test_validate_password_match():
+    """
+	Tests the validate_password_match function.
+	:return: None
+	:rtype: Nonetype
+    """   
     with pytest.raises(ValueError):
         validate_password_match("testpass", "testpasss")
         validate_password_match("testpasS", "testpass")

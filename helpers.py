@@ -2,16 +2,24 @@ from art import *
 from cryptography.fernet import Fernet
 
 
-# Generates the welcome message and version number of the software
 def welcome_message():
+    """
+	Prints welcome message.
+	:return: None
+	:rtype: Nonetype
+    """
     print()
     print("--------------------------------------------   Welcome to   --------------------------------------------")
     tprint("Password   Manager")
     print("--------------------------------------------  Version 1.0.1  --------------------------------------------")
 
 
-# Prints instruction on how to use the software
 def show_instructions():
+    """
+	Prints instruction on how to use the software.
+	:return: None
+	:rtype: Nonetype
+    """
     print()
     print("""Password Manager is a simple password managing software developed by Arif Faisal (arif.iba34@gmail.com). 
           \nThis program has the following features that you can use:
@@ -24,8 +32,12 @@ def show_instructions():
 \n----------------------------------------------------------------------------------------------------------""")
 
 
-# Prompts the user for key requirement, and generates a unique one, if required
 def get_user_key():
+    """
+	Prompts the user for key requirement, and generates a unique one, if required.
+	:return: user key
+	:rtype: bytes
+    """
     print("If you already have a key, type 'N' or 'No' to continue.")
     print("(Keys are required to securely store your password. If you don't have one, type 'Y' or 'Yes)")
     user_key_req = input("Do you need a key? ").lower()
@@ -44,8 +56,12 @@ def get_user_key():
     return user_key
 
 
-# Prints all the features that are available for use
 def show_features():
+    """
+	Prints all the features that are available for use.
+	:return: feature number that the user wants to use
+	:rtype: str
+    """
     print()
     print("-----------------------------------------------------------------------------------------------------------")
     tprint("                                 Features")
@@ -64,8 +80,12 @@ def show_features():
     return relevant_num
 
 
-# Generates a unique secure key based on Fernet object
 def generate_key():
+    """
+	Generates a unique secure key based on Fernet object.
+	:return: user key
+	:rtype: bytes
+    """
     user_key = Fernet.generate_key()
     print()
     print("----------------------------------------------------------------------------------------------------------")
@@ -79,7 +99,11 @@ def generate_key():
     return user_key
 
 
-# Prints exit message to the user
 def exit_message():
+    """
+	Prints exit message to the user.
+	:return: None
+	:rtype: Nonetype
+    """
     tprint("Thank   you")
     print("--------------- for using Password Manager! ---------------")

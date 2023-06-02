@@ -121,21 +121,31 @@ def program_logic(num, user, fernet):
 
 
 def input_validation():
+    """
+	Validates the input provided by the user.
+	:return: username, email, and password as stringss
+	:rtype: str
+    """
+    
+    # Validates username
     while True:
         username = input("Type your username: ")
         if validate_username(username):
             break
 
+    # Validates email
     while True:
         email = input("Type your email: ")
         if validate_email(email):
             break
 
+    # Validates password
     while True:
         password = pwinput.pwinput(prompt="Type your password: ", mask="*")
         if validate_password(password):
             break
         
+    # Matches password
     while True:
         confirm_password = pwinput.pwinput(prompt="Confirm your password: ", mask="*")
         if validate_password_match(password, confirm_password):
