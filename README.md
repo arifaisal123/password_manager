@@ -8,6 +8,7 @@ Password Manager Software is designed to manage all your password needs, from ge
   - [Functionality](#functionality)
   - [Screenshot](#screenshot)
   - [Installation](#installation)
+  - [Credentials for testing](#credentials-for-testing)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
