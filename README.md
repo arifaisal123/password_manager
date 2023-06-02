@@ -43,10 +43,10 @@ This program was made with Python 3.11.1. Ensure other dependencies mentioned in
 
 The following test credentials are provided to check the functionalities of the software. Users can remove them anytime, if they will. Credentials are provided for test purposes only, and does not resemble any real account.
 
-username: test123
-email: test123@pwmtest.com
-password: test123
-secure key: 2vqhv7Dq19z_FwB67AO1TwnxlcDS_NDx5_vKMrgJcf4=
+username: test123  
+email: test123@pwmtest.com  
+password: test123  
+secure key: 2vqhv7Dq19z_FwB67AO1TwnxlcDS_NDx5_vKMrgJcf4=  
 
 ### Links
 
