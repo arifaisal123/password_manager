@@ -23,6 +23,8 @@ from records import *
 from helpers import *
 from passwords import *
 from art import *
+from validation import *
+import pwinput
 
 
 def main():
@@ -44,22 +46,33 @@ def main():
 
         user_input = input("New User? Type 1 to Register, or 2 for Login (Returning User): ")
         if user_input == "1":
-            register_user()
+            print()
+            print("----------------------------------------------------------------------------------------------------------")
+            tprint("                  Registration")
+            print("----------------------------------------------------------------------------------------------------------")
+            
+            username, email, password = input_validation()
+
+            register_user(username, email, password)
             current_user = login_user()
             break
+        
         elif user_input == "2":
             current_user = login_user()
             break
+        
         elif user_input == "3":
             print("------------------------------------------------------------------------------------------------")
             tprint("In   Development")
             print("This feature is currently in development, and will be added in the future release.")
             print("------------------------------------------------------------------------------------------------")
+        
         elif user_input == "4":
             print("------------------------------------------------------------------------------------------------")
             tprint("In   Development")
             print("This feature is currently in development, and will be added in the future release.")
             print("------------------------------------------------------------------------------------------------")
+        
         else:
             print("Invalid input!")
     
@@ -105,6 +118,30 @@ def program_logic(num, user, fernet):
     if user_input == "7":
         exit_message()
         exit()
+
+
+def input_validation():
+    while True:
+        username = input("Type your username: ")
+        if validate_username(username):
+            break
+
+    while True:
+        email = input("Type your email: ")
+        if validate_email(email):
+            break
+
+    while True:
+        password = pwinput.pwinput(prompt="Type your password: ", mask="*")
+        if validate_password(password):
+            break
+        
+    while True:
+        confirm_password = pwinput.pwinput(prompt="Confirm your password: ", mask="*")
+        if validate_password_match(password, confirm_password):
+            break
+
+    return username, email, password
 
 
 # When the program runs, the script will function (not available on imports)
